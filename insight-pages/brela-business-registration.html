@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Step-by-Step Guide to Registering Your Business with BRELA - Elite Tax and Management Consultancy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/app.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="font-poppins">
+
+    <!-- Topbar -->
+    <div class="bg-mc-blue text-white text-sm">
+        <div class="container mx-auto flex justify-between items-center py-2 px-4 md:px-8">
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center hover:text-mc-green transition-colors duration-300">
+                    <a href="mailto:management.elitetax@gmail.com" class="flex items-center">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <span>management.elitetax@gmail.com</span>
+                    </a>
+                </div>
+                <div class="h-4 w-px bg-white/30"></div>
+                <div class="flex items-center hover:text-mc-green transition-colors duration-300">
+                    <a href="tel:+255685005990" class="flex items-center">
+                        <i class="fas fa-phone mr-2"></i>
+                        <span>+255 685 005 990</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#" class="hover:text-mc-green transition-colors duration-300">
+                    <i class="fab fa-facebook text-lg"></i>
+                </a>
+                <a href="https://www.instagram.com/elite_taxmanagement.tz/" target="_blank" rel="noopener noreferrer" class="hover:text-mc-green transition-colors duration-300">
+                    <i class="fab fa-instagram text-lg"></i>
+                </a>
+                <a href="#" class="hover:text-mc-green transition-colors duration-300">
+                    <i class="fab fa-x-twitter text-lg"></i>
+                </a>
+                <a href="#" class="hover:text-mc-green transition-colors duration-300">
+                    <i class="fab fa-linkedin text-lg"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center py-3 px-4 md:px-8">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="../index.html">
+                    <img src="../assets/img/logo.jpg" alt="Elite Tax and Management Consultancy Logo" class="lg:block hidden h-14">
+                    <img src="../assets/img/icon.jpg" alt="Elite Tax and Management Consultancy Logo" class="lg:hidden h-16">
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 font-raleway font-semibold">
+                <a href="../index.html" class="relative text-mc-blue hover:text-mc-green transition duration-300 after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[3px] after:bg-mc-green hover:after:w-full after:transition-all after:duration-300">Home</a>
+                <a href="../about-us.html" class="relative text-mc-blue hover:text-mc-green transition duration-300 after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[3px] after:bg-mc-green hover:after:w-full after:transition-all after:duration-300">About Us</a>
+                <a href="../our-services.html" class="relative text-mc-blue hover:text-mc-green transition duration-300 after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[3px] after:bg-mc-green hover:after:w-full after:transition-all after:duration-300">Our Services</a>
+                <a href="../privacy-policy.html" class="relative text-mc-blue hover:text-mc-green transition duration-300 after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[3px] after:bg-mc-green hover:after:w-full after:transition-all after:duration-300">Privacy Policy</a>
+                <a href="../contact-us.html" class="group relative inline-flex items-center px-8 py-4 bg-mc-blue text-white rounded-lg hover:bg-mc-green transition-all duration-300 transform hover:-translate-y-1 group shadow-lg hover:shadow-xl overflow-hidden">
+                    Contact Us
+                    <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-mc-blue focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu (Initially hidden) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <a href="../index.html" class="block px-4 py-2 text-mc-blue hover:bg-mc-bluebg hover:text-mc-blue transition duration-300">Home</a>
+            <a href="../about-us.html" class="block px-4 py-2 text-mc-blue hover:bg-mc-bluebg hover:text-mc-blue transition duration-300">About Us</a>
+            <a href="../our-services.html" class="block px-4 py-2 text-mc-blue hover:bg-mc-bluebg hover:text-mc-blue transition duration-300">Our Services</a>
+            <a href="../privacy-policy.html" class="block px-4 py-2 text-mc-blue hover:bg-mc-bluebg hover:text-mc-blue transition duration-300">Privacy Policy</a>
+            <a href="../contact-us.html" class="block px-4 py-2 text-mc-blue hover:bg-mc-bluebg hover:text-mc-blue transition duration-300">Contact Us</a>
+        </div>
+    </header>
+    <!-- Breadcrumbs -->
+    <div class="container mx-auto pt-10 animate-fade-in max-w-5xl font-poppins">
+      <nav class="text-sm text-mc-blue/70 flex items-center space-x-2">
+        <a href="../index.html" class="hover:text-mc-green transition-colors duration-300 flex items-center">
+          <i class="fas fa-home text-mc-green mr-1"></i> Home
+        </a>
+        <span class="mx-2">/</span>
+        <a href="../insights_page.html" class="hover:text-mc-green transition-colors duration-300">Insights</a>
+        <span class="mx-2">/</span>
+        <span class="text-mc-green font-semibold">A Step-by-Step Guide to Registering Your Business with BRELA</span>
+      </nav>
+    </div>
+
+    <!-- Blog Content Section -->
+    <section class="py-12 font-poppins">
+      <div class="container mx-auto px-4 md:px-8 flex flex-col items-center">
+        <div class="w-full max-w-5xl animate-fade-in-delay">
+          <!-- Featured Image -->
+          <div class="overflow-hidden rounded-3xl shadow-lg mb-8">
+            <img src="https://placehold.co/900x500/012040/FFFFFF/png?text=BRELA+Registration&font=raleway" alt="A Step-by-Step Guide to Registering Your Business with BRELA" class="w-full h-72 md:h-[450px] object-cover transition-transform duration-700 hover:scale-105">
+          </div>
+          <!-- Blog Content -->
+          <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 animate-fade-in-delay-2">
+            <h1 class="text-3xl md:text-4xl font-raleway font-bold text-mc-blue mb-4">A Step-by-Step Guide to Registering Your Business with BRELA</h1>
+            <div class="flex items-center space-x-4 mb-6">
+              <span class="inline-block px-3 py-1 bg-mc-green/10 text-mc-green font-semibold rounded-full text-xs">Business Advisory</span>
+              <span class="text-gray-400 text-sm">Coming Soon</span>
+            </div>
+            <div class="prose prose-lg max-w-none text-gray-700 font-poppins space-y-4">
+              <p><em>This is a placeholder article — replace this text with your own content.</em></p>
+              <p>Use this space to walk clients through what they need to know: common questions you hear, a step-by-step breakdown of the process, recent regulatory updates, or lessons from your own practice. Keep it practical and specific to what your clients in Tanzania actually ask you.</p>
+              <p>Add a second paragraph here with more detail, an example, or a short case study from your own work.</p>
+              <p>Wrap up with a short conclusion, and invite readers to get in touch with Elite Tax and Management Consultancy for personalized advice on their specific situation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Insights Section -->
+    <section class="py-16 bg-gradient-to-br from-white via-mc-bluebg/10 to-white animate-fade-in-delay-3 font-poppins">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="mb-10 text-left">
+            <h2 class="text-3xl md:text-4xl font-raleway font-bold text-mc-blue">Related Insights</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
+          <div class="insight-card group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2" data-category="Tax Consultancy" data-title="Understanding TRA Tax Compliance for Small Businesses">
+            <a href="./tra-tax-compliance-guide.html" class="block overflow-hidden">
+              <img src="https://placehold.co/900x500/012040/FFFFFF/png?text=Tax+Compliance&font=raleway" alt="Understanding TRA Tax Compliance for Small Businesses" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105">
+            </a>
+            <div class="p-6">
+              <span class="inline-block px-3 py-1 bg-mc-green/10 text-mc-green font-semibold rounded-full text-xs mb-3">Tax Consultancy</span>
+              <a href="./tra-tax-compliance-guide.html" class="block text-xl font-bold font-raleway text-mc-blue group-hover:text-mc-green transition-colors duration-300 mb-2">Understanding TRA Tax Compliance for Small Businesses</a>
+              <div class="text-sm text-gray-500">Coming Soon</div>
+            </div>
+          </div>
+          <div class="insight-card group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2" data-category="Compliance Services" data-title="NSSF & WCF: What Every Employer in Tanzania Needs to Know">
+            <a href="./nssf-wcf-compliance.html" class="block overflow-hidden">
+              <img src="https://placehold.co/900x500/012040/FFFFFF/png?text=NSSF+%26+WCF&font=raleway" alt="NSSF & WCF: What Every Employer in Tanzania Needs to Know" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105">
+            </a>
+            <div class="p-6">
+              <span class="inline-block px-3 py-1 bg-mc-green/10 text-mc-green font-semibold rounded-full text-xs mb-3">Compliance Services</span>
+              <a href="./nssf-wcf-compliance.html" class="block text-xl font-bold font-raleway text-mc-blue group-hover:text-mc-green transition-colors duration-300 mb-2">NSSF & WCF: What Every Employer in Tanzania Needs to Know</a>
+              <div class="text-sm text-gray-500">Coming Soon</div>
+            </div>
+          </div>
+          <div class="insight-card group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2" data-category="Tax Consultancy" data-title="5 Common Tax Filing Mistakes and How to Avoid Them">
+            <a href="./common-tax-filing-mistakes.html" class="block overflow-hidden">
+              <img src="https://placehold.co/900x500/012040/FFFFFF/png?text=Tax+Filing+Tips&font=raleway" alt="5 Common Tax Filing Mistakes and How to Avoid Them" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105">
+            </a>
+            <div class="p-6">
+              <span class="inline-block px-3 py-1 bg-mc-green/10 text-mc-green font-semibold rounded-full text-xs mb-3">Tax Consultancy</span>
+              <a href="./common-tax-filing-mistakes.html" class="block text-xl font-bold font-raleway text-mc-blue group-hover:text-mc-green transition-colors duration-300 mb-2">5 Common Tax Filing Mistakes and How to Avoid Them</a>
+              <div class="text-sm text-gray-500">Coming Soon</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-mc-blue pt-20 text-white">
+        <!-- Main Footer Content -->
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 pb-12">
+                <!-- Company Info -->
+                <div class="w-full lg:w-[32%] space-y-6">
+                    <img src="../assets/img/logo-dark.jpg" alt="Elite Tax Management Logo" class="h-14 rounded-full">
+                    <p class="text-white/80 leading-relaxed max-w-md">
+                        "Think Forward, Stay Compliant." Tax consultancy, business advisory, and compliance services for businesses across Tanzania.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-mc-green transition-colors duration-300 group">
+                            <i class="fab fa-linkedin-in text-white group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-mc-green transition-colors duration-300 group">
+                            <i class="fab fa-twitter text-white group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-mc-green transition-colors duration-300 group">
+                            <i class="fab fa-facebook-f text-white group-hover:text-white"></i>
+                        </a>
+                        <a href="https://www.instagram.com/elite_taxmanagement.tz/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-mc-green transition-colors duration-300 group">
+                            <i class="fab fa-instagram text-white group-hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Quick Links -->
+                <div class="w-full lg:w-[18%]">
+                    <h3 class="text-xl font-raleway font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="../about-us.html" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../our-services.html" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Our Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../insights_page.html" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Insights
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../contact-us.html" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Services -->
+                <div class="w-full lg:w-[25%]">
+                    <h3 class="text-xl font-raleway font-bold mb-6">Our Services</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="../our-services.html#tax-consultancy" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Tax Consultancy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../our-services.html#business-advisory" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Management & Business Advisory
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../our-services.html#compliance" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Compliance Services
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Info -->
+                <div class="w-full lg:w-[25%]">
+                    <h3 class="text-xl font-raleway font-bold mb-6">Get In Touch</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-mc-green">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span class="text-white/80">
+                                Tabata Segerea
+Kwa Bibi Bus stop
+                            </span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-mc-green">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <a href="tel:+255685005990" class="text-white/80 hover:text-mc-green transition-colors duration-300">
+                                +255 685 005 990
+                            </a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-mc-green">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <a href="mailto:management.elitetax@gmail.com" class="text-white/80 hover:text-mc-green transition-colors duration-300 break-all">
+                                management.elitetax@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/10 py-6 bg-[#011b36]">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="text-white/60 text-sm">
+                        © 2026 Elite Tax and Management Consultancy. All rights reserved.
+                    </div>
+                    <div class="flex items-center space-x-6 text-sm">
+                        <a href="../privacy-policy.html" class="text-white/60 hover:text-mc-green transition-colors duration-300">Privacy Policy</a>
+                        <a href="../terms-of-service.html" class="text-white/60 hover:text-mc-green transition-colors duration-300">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts - Placed at end of body -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+</body>
+</html>

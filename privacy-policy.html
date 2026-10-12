@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Elite Tax Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/app.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="font-poppins">
+    <!-- Topbar -->
+    <div class="bg-mc-blue text-white text-sm">
+        <div class="container mx-auto flex justify-between items-center py-2 px-4 md:px-8">
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center hover:text-mc-green transition-colors duration-300">
+                    <a href="mailto:management.elitetax@gmail.com" class="flex items-center">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <span>management.elitetax@gmail.com</span>
+                    </a>
+                </div>
+                <div class="h-4 w-px bg-white/30"></div>
+                <div class="flex items-center hover:text-mc-green transition-colors duration-300">
+                    <a href="tel:+255685005990" class="flex items-center">
+                        <i class="fas fa-phone mr-2"></i>
+                        <span>+255 685 005 990</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#" class="hover:text-mc-green transition-colors duration-300">
+                    <i class="fab fa-facebook text-lg"></i>
+                </a>
+                <a href="https://www.instagram.com/elite_taxmanagement.tz/" target="_blank" rel="noopener noreferrer" class="hover:text-mc-green transition-colors duration-300">
+                    <i class="fab fa-instagram text-lg"></i>
+                </a>
+                <a href="#" class="hover:text-mc-green transition-colors duration-300">
+                    <i class="fab fa-x-twitter text-lg"></i>
+                </a>
+                <a href="#" class="hover:text-mc-green transition-colors duration-300">
+                    <i class="fab fa-linkedin text-lg"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center py-3 px-4 md:px-8">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="./index.html">
+                    <img src="./assets/img/logo.jpg" alt="Elite Tax and Management Consultancy Logo" class="lg:block hidden h-14">
+                    <img src="./assets/img/icon.jpg" alt="Elite Tax and Management Consultancy Logo" class="lg:hidden h-16">
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 font-raleway font-semibold">
+                <a href="./index.html" class="relative text-mc-blue hover:text-mc-green transition duration-300 after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[3px] after:bg-mc-green hover:after:w-full after:transition-all after:duration-300">Home</a>
+                <a href="./about-us.html" class="relative text-mc-blue hover:text-mc-green transition duration-300 after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[3px] after:bg-mc-green hover:after:w-full after:transition-all after:duration-300">About Us</a>
+                <a href="./our-services.html" class="relative text-mc-blue hover:text-mc-green transition duration-300 after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[3px] after:bg-mc-green hover:after:w-full after:transition-all after:duration-300">Our Services</a>
+                <a href="./insights_page.html" class="relative text-mc-blue hover:text-mc-green transition duration-300 after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[3px] after:bg-mc-green hover:after:w-full after:transition-all after:duration-300">Insights</a>
+                <a href="./privacy-policy.html" class="relative text-mc-blue hover:text-mc-green transition duration-300 after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[3px] after:bg-mc-green hover:after:w-full after:transition-all after:duration-300">Privacy Policy</a>
+                <a href="./contact-us.html" class="group relative inline-flex items-center px-8 py-4 bg-mc-blue text-white rounded-lg hover:bg-mc-green transition-all duration-300 transform hover:-translate-y-1 group shadow-lg hover:shadow-xl overflow-hidden">
+                    Contact Us
+                    <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-mc-blue focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu (Initially hidden) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <a href="./index.html" class="block px-4 py-2 text-mc-blue hover:bg-mc-bluebg hover:text-mc-blue transition duration-300">Home</a>
+            <a href="./about-us.html" class="block px-4 py-2 text-mc-blue hover:bg-mc-bluebg hover:text-mc-blue transition duration-300">About Us</a>
+            <a href="./our-services.html" class="block px-4 py-2 text-mc-blue hover:bg-mc-bluebg hover:text-mc-blue transition duration-300">Our Services</a>
+            <a href="./insights_page.html" class="block px-4 py-2 text-mc-blue hover:bg-mc-bluebg hover:text-mc-blue transition duration-300">Insights</a>
+            <a href="./privacy-policy.html" class="block px-4 py-2 text-mc-blue hover:bg-mc-bluebg hover:text-mc-blue transition duration-300">Privacy Policy</a>
+            <a href="./contact-us.html" class="block px-4 py-2 text-mc-blue hover:bg-mc-bluebg hover:text-mc-blue transition duration-300">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs Section -->
+    <section class="relative py-16 bg-gradient-to-r from-mc-blue to-mc-blue/95 overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yIDJoNTZ2NTZIMnoiLz48cGF0aCBkPSJNMiAyaDU2djU2SDJ6Ii8+PHBhdGggZD0iTTAgMGg2MHY2MEgweiIvPjxwYXRoIGQ9Ik0wIDBoNjB2NjBIMHoiLz48cGF0aCBkPSJNMCAwaDE4djE4SDB6IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDMpIi8+PC9nPjwvc3ZnPg==')] opacity-10"></div>
+            <div class="absolute top-0 left-0 w-96 h-96 bg-mc-green/10 rounded-full -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/2 translate-y-1/2 animate-pulse delay-700"></div>
+        </div>
+
+        <div class="container mx-auto px-4 md:px-8 relative">
+            <div class="flex flex-col items-center text-center">
+                <!-- Page Title -->
+                <h1 class="text-4xl md:text-5xl font-raleway font-bold text-white mb-6">
+                    Privacy Policy
+                </h1>
+
+                <!-- Breadcrumbs Navigation -->
+                <nav class="flex items-center space-x-3 text-white/80">
+                    <a href="./index.html" class="hover:text-mc-green transition-colors duration-300 flex items-baseline group">
+                        <i class="fas fa-home text-mc-green mr-2"></i>
+                        <span>Home</span>
+                        <i class="fas fa-chevron-right text-white/50 text-sm mx-3 group-hover:text-mc-green transition-colors duration-300"></i>
+                    </a>
+                    <span class="text-mc-green font-medium">Privacy Policy</span>
+                </nav>
+
+                <!-- Decorative Elements -->
+                <div class="mt-8 relative">
+                    <div class="h-1 w-20 bg-mc-green mx-auto"></div>
+                    <div class="absolute -top-4 -left-4 w-2 h-2 bg-mc-green/50 rounded-full animate-ping"></div>
+                    <div class="absolute -bottom-4 -right-4 w-2 h-2 bg-mc-green/50 rounded-full animate-ping" style="animation-delay: -1s;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center">
+            <a href="#privacy-content" class="inline-block text-white/80 hover:text-mc-green transition-colors duration-300">
+                <i class="fas fa-arrow-down animate-bounce"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Content Section -->
+    <section id="privacy-content" class="py-20 bg-white relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-mc-blue/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-mc-green/5 rounded-full translate-x-1/2 translate-y-1/2"></div>
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yIDJoNTZ2NTZIMnoiLz48cGF0aCBkPSJNMiAyaDU2djU2SDJ6Ii8+PHBhdGggZD0iTTAgMGg2MHY2MEgweiIvPjxwYXRoIGQ9Ik0wIDBoNjB2NjBIMHoiLz48cGF0aCBkPSJNMCAwaDE4djE4SDB6IiBmaWxsPSJyZ2JhKDEsMzIsNjQsMC4wMykiLz48L2c+PC9zdmc+')] opacity-5"></div>
+        </div>
+
+        <div class="container mx-auto px-4 md:px-8 relative">
+            <!-- Effective Date -->
+            <div class="text-center mb-12">
+                <span class="inline-block px-4 py-2 bg-mc-blue/5 rounded-full text-mc-blue font-medium">
+                    Effective Date: September 1st 2024
+                </span>
+            </div>
+
+            <!-- Introduction -->
+            <div class="max-w-4xl mx-auto prose prose-lg">
+                <p class="text-gray-600 leading-relaxed">
+                    At Elite Tax and Management Consultancy ("we," "our," or "us"), we are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website [www.insightsandsolutions.com] (the "Site").
+                </p>
+            </div>
+
+            <!-- Policy Sections -->
+            <div class="max-w-4xl mx-auto mt-12 space-y-8">
+                <!-- Section 1: Information We Collect -->
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-mc-blue/10 flex items-center justify-center group-hover:bg-mc-green/10 transition-colors duration-300">
+                                <i class="fas fa-database text-mc-blue group-hover:text-mc-green transition-colors duration-300"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-raleway font-bold text-mc-blue mb-4 group-hover:text-mc-green transition-colors duration-300">
+                                    1. Information We Collect
+                                </h3>
+                                <p class="text-gray-600 mb-4">We collect personal and non-personal information in the following ways:</p>
+                                <ul class="space-y-3 text-gray-600">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-mc-green mt-1 mr-3"></i>
+                                        <span><strong>Information You Provide:</strong> When you contact us via our forms, email, or newsletter signup, we may collect your name, email address, phone number, company name, and message content.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-mc-green mt-1 mr-3"></i>
+                                        <span><strong>Automatically Collected Data:</strong> We may collect non-personal data such as your IP address, browser type, pages visited, and time spent on the Site through cookies and analytics tools.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: How We Use Your Information -->
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-mc-blue/10 flex items-center justify-center group-hover:bg-mc-green/10 transition-colors duration-300">
+                                <i class="fas fa-cogs text-mc-blue group-hover:text-mc-green transition-colors duration-300"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-raleway font-bold text-mc-blue mb-4 group-hover:text-mc-green transition-colors duration-300">
+                                    2. How We Use Your Information
+                                </h3>
+                                <p class="text-gray-600 mb-4">We use the information we collect to:</p>
+                                <ul class="space-y-3 text-gray-600">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-mc-green mt-1 mr-3"></i>
+                                        <span>Respond to your inquiries and provide consulting services</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-mc-green mt-1 mr-3"></i>
+                                        <span>Improve the functionality and performance of our Site</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-mc-green mt-1 mr-3"></i>
+                                        <span>Send newsletters or updates (if you have opted in)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-mc-green mt-1 mr-3"></i>
+                                        <span>Analyze website usage and trends</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Use of Cookies -->
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-mc-blue/10 flex items-center justify-center group-hover:bg-mc-green/10 transition-colors duration-300">
+                                <i class="fas fa-cookie-bite text-mc-blue group-hover:text-mc-green transition-colors duration-300"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-raleway font-bold text-mc-blue mb-4 group-hover:text-mc-green transition-colors duration-300">
+                                    3. Use of Cookies and Tracking Technologies
+                                </h3>
+                                <p class="text-gray-600">
+                                    We use cookies and similar tracking technologies to enhance your experience on our Site. You can modify your browser settings to disable cookies if you prefer.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4: Sharing Information -->
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-mc-blue/10 flex items-center justify-center group-hover:bg-mc-green/10 transition-colors duration-300">
+                                <i class="fas fa-share-alt text-mc-blue group-hover:text-mc-green transition-colors duration-300"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-raleway font-bold text-mc-blue mb-4 group-hover:text-mc-green transition-colors duration-300">
+                                    4. Sharing Your Information
+                                </h3>
+                                <p class="text-gray-600">
+                                    We do not sell, rent, or trade your personal information. We may share your data with third-party service providers who help us operate our website or conduct our business, as long as those parties agree to keep this information confidential. We may also disclose information if required by law.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 5: Data Retention -->
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-mc-blue/10 flex items-center justify-center group-hover:bg-mc-green/10 transition-colors duration-300">
+                                <i class="fas fa-clock text-mc-blue group-hover:text-mc-green transition-colors duration-300"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-raleway font-bold text-mc-blue mb-4 group-hover:text-mc-green transition-colors duration-300">
+                                    5. Data Retention
+                                </h3>
+                                <p class="text-gray-600">
+                                    We retain your personal information only for as long as necessary to fulfill the purposes for which it was collected or to comply with legal obligations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 6: Data Security -->
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-mc-blue/10 flex items-center justify-center group-hover:bg-mc-green/10 transition-colors duration-300">
+                                <i class="fas fa-shield-alt text-mc-blue group-hover:text-mc-green transition-colors duration-300"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-raleway font-bold text-mc-blue mb-4 group-hover:text-mc-green transition-colors duration-300">
+                                    6. Data Security
+                                </h3>
+                                <p class="text-gray-600">
+                                    We implement appropriate technical and organizational security measures to protect your information. However, please note that no method of transmission over the Internet is completely secure.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 7: Your Rights -->
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-mc-blue/10 flex items-center justify-center group-hover:bg-mc-green/10 transition-colors duration-300">
+                                <i class="fas fa-user-shield text-mc-blue group-hover:text-mc-green transition-colors duration-300"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-raleway font-bold text-mc-blue mb-4 group-hover:text-mc-green transition-colors duration-300">
+                                    7. Your Rights and Choices
+                                </h3>
+                                <p class="text-gray-600 mb-4">Depending on your location, you may have the right to:</p>
+                                <ul class="space-y-3 text-gray-600">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-mc-green mt-1 mr-3"></i>
+                                        <span>Access the personal data we hold about you</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-mc-green mt-1 mr-3"></i>
+                                        <span>Request correction or deletion of your information</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-mc-green mt-1 mr-3"></i>
+                                        <span>Object to or restrict our processing of your data</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 8: Third-Party Links -->
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-mc-blue/10 flex items-center justify-center group-hover:bg-mc-green/10 transition-colors duration-300">
+                                <i class="fas fa-external-link-alt text-mc-blue group-hover:text-mc-green transition-colors duration-300"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-raleway font-bold text-mc-blue mb-4 group-hover:text-mc-green transition-colors duration-300">
+                                    8. Third-Party Links
+                                </h3>
+                                <p class="text-gray-600">
+                                    Our Site may contain links to other websites. We are not responsible for the privacy practices of these external sites.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 9: Changes to Policy -->
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-mc-blue/10 flex items-center justify-center group-hover:bg-mc-green/10 transition-colors duration-300">
+                                <i class="fas fa-sync-alt text-mc-blue group-hover:text-mc-green transition-colors duration-300"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-raleway font-bold text-mc-blue mb-4 group-hover:text-mc-green transition-colors duration-300">
+                                    9. Changes to This Privacy Policy
+                                </h3>
+                                <p class="text-gray-600">
+                                    We may update this Privacy Policy from time to time. The updated version will be indicated by a revised "Effective Date" and will be effective as soon as it is accessible.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 10: Contact Us -->
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-mc-blue/10 flex items-center justify-center group-hover:bg-mc-green/10 transition-colors duration-300">
+                                <i class="fas fa-envelope text-mc-blue group-hover:text-mc-green transition-colors duration-300"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-raleway font-bold text-mc-blue mb-4 group-hover:text-mc-green transition-colors duration-300">
+                                    10. Contact Us
+                                </h3>
+                                <p class="text-gray-600 mb-4">If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+                                <div class="space-y-2">
+                                    <a href="mailto:management.elitetax@gmail.com" class="flex items-center text-mc-blue hover:text-mc-green transition-colors duration-300">
+                                        <i class="fas fa-envelope mr-2"></i>
+                                        management.elitetax@gmail.com
+                                    </a>
+                                    <a href="tel:+255685005990" class="flex items-center text-mc-blue hover:text-mc-green transition-colors duration-300">
+                                        <i class="fas fa-phone mr-2"></i>
+                                        +255 685 005 990
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thank You Note -->
+            <div class="max-w-4xl mx-auto mt-12 text-center">
+                <p class="text-gray-600 italic">
+                    Thank you for trusting Elite Tax and Management Consultancy.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-mc-blue pt-20 text-white">
+        <!-- Main Footer Content -->
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 pb-12">
+                <!-- Company Info -->
+                <div class="w-full lg:w-[32%] space-y-6">
+                    <img src="./assets/img/logo-dark.jpg" alt="Elite Tax Management Logo" class="h-14 rounded-full">
+                    <p class="text-white/80 leading-relaxed max-w-md">
+                        "Think Forward, Stay Compliant." Tax consultancy, business advisory, and compliance services for businesses across Tanzania.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-mc-green transition-colors duration-300 group">
+                            <i class="fab fa-linkedin-in text-white group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-mc-green transition-colors duration-300 group">
+                            <i class="fab fa-twitter text-white group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-mc-green transition-colors duration-300 group">
+                            <i class="fab fa-facebook-f text-white group-hover:text-white"></i>
+                        </a>
+                        <a href="https://www.instagram.com/elite_taxmanagement.tz/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-mc-green transition-colors duration-300 group">
+                            <i class="fab fa-instagram text-white group-hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Quick Links -->
+                <div class="w-full lg:w-[18%]">
+                    <h3 class="text-xl font-raleway font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="./about-us.html" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./our-services.html" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Our Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./insights_page.html" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Insights
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./contact-us.html" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Services -->
+                <div class="w-full lg:w-[25%]">
+                    <h3 class="text-xl font-raleway font-bold mb-6">Our Services</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="./our-services.html#tax-consultancy" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Tax Consultancy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./our-services.html#business-advisory" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Management & Business Advisory
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./our-services.html#compliance" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Compliance Services
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Info -->
+                <div class="w-full lg:w-[25%]">
+                    <h3 class="text-xl font-raleway font-bold mb-6">Get In Touch</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-mc-green">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span class="text-white/80">
+                                Tabata Segerea
+Kwa Bibi Bus stop
+                            </span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-mc-green">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <a href="tel:+255685005990" class="text-white/80 hover:text-mc-green transition-colors duration-300">
+                                +255 685 005 990
+                            </a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-mc-green">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <a href="mailto:management.elitetax@gmail.com" class="text-white/80 hover:text-mc-green transition-colors duration-300 break-all">
+                                management.elitetax@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/10 py-6 bg-[#011b36]">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="text-white/60 text-sm">
+                        © 2026 Elite Tax and Management Consultancy. All rights reserved.
+                    </div>
+                    <div class="flex items-center space-x-6 text-sm">
+                        <a href="./privacy-policy.html" class="text-white/60 hover:text-mc-green transition-colors duration-300">Privacy Policy</a>
+                        <a href="./terms-of-service.html" class="text-white/60 hover:text-mc-green transition-colors duration-300">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts - Placed at end of body -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>    
+</body>
+</html>

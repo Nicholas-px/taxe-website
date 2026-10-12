@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/app.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+</head>
+<body class="font-poppins">
+
+    <!-- Topbar -->
+    <div class="bg-mc-blue text-white text-sm">
+        <div class="container mx-auto flex justify-between items-center py-2 px-4 md:px-8">
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center hover:text-mc-green transition-colors duration-300">
+                    <a href="mailto:management.elitetax@gmail.com" class="flex items-center">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <span>management.elitetax@gmail.com</span>
+                    </a>
+                </div>
+                <div class="h-4 w-px bg-white/30"></div>
+                <div class="flex items-center hover:text-mc-green transition-colors duration-300">
+                    <a href="tel:+255685005990" class="flex items-center">
+                        <i class="fas fa-phone mr-2"></i>
+                        <span>+255 685 005 990</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#" class="hover:text-mc-green transition-colors duration-300">
+                    <i class="fab fa-facebook text-lg"></i>
+                </a>
+                <a href="https://www.instagram.com/elite_taxmanagement.tz/" target="_blank" rel="noopener noreferrer" class="hover:text-mc-green transition-colors duration-300">
+                    <i class="fab fa-instagram text-lg"></i>
+                </a>
+                <a href="#" class="hover:text-mc-green transition-colors duration-300">
+                    <i class="fab fa-x-twitter text-lg"></i>
+                </a>
+                <a href="#" class="hover:text-mc-green transition-colors duration-300">
+                    <i class="fab fa-linkedin text-lg"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center py-3 px-4 md:px-8">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="./index.html">
+                    <img src="./assets/img/logo.jpg" alt="Elite Tax and Management Consultancy Logo" class="lg:block hidden h-14">
+                    <img src="./assets/img/icon.jpg" alt="Elite Tax and Management Consultancy Logo" class="lg:hidden h-16">
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 font-raleway font-semibold">
+                <a href="./index.html" class="relative text-mc-blue hover:text-mc-green transition duration-300 after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[3px] after:bg-mc-green hover:after:w-full after:transition-all after:duration-300">Home</a>
+                <a href="./about-us.html" class="relative text-mc-blue hover:text-mc-green transition duration-300 after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[3px] after:bg-mc-green hover:after:w-full after:transition-all after:duration-300">About Us</a>
+                <a href="./our-services.html" class="relative text-mc-blue hover:text-mc-green transition duration-300 after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[3px] after:bg-mc-green hover:after:w-full after:transition-all after:duration-300">Our Services</a>
+                <a href="./insights_page.html" class="relative text-mc-blue hover:text-mc-green transition duration-300 after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[3px] after:bg-mc-green hover:after:w-full after:transition-all after:duration-300">Insights</a>
+                <a href="./privacy-policy.html" class="relative text-mc-blue hover:text-mc-green transition duration-300 after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[3px] after:bg-mc-green hover:after:w-full after:transition-all after:duration-300">Privacy Policy</a>
+                <a href="./contact-us.html" class="group relative inline-flex items-center px-8 py-4 bg-mc-blue text-white rounded-lg hover:bg-mc-green transition-all duration-300 transform hover:-translate-y-1 group shadow-lg hover:shadow-xl overflow-hidden">
+                    Contact Us
+                    <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-mc-blue focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu (Initially hidden) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <a href="./index.html" class="block px-4 py-2 text-mc-blue hover:bg-mc-bluebg hover:text-mc-blue transition duration-300">Home</a>
+            <a href="./about-us.html" class="block px-4 py-2 text-mc-blue hover:bg-mc-bluebg hover:text-mc-blue transition duration-300">About Us</a>
+            <a href="./our-services.html" class="block px-4 py-2 text-mc-blue hover:bg-mc-bluebg hover:text-mc-blue transition duration-300">Our Services</a>
+            <a href="./insights_page.html" class="block px-4 py-2 text-mc-blue hover:bg-mc-bluebg hover:text-mc-blue transition duration-300">Insights</a>
+            <a href="./privacy-policy.html" class="block px-4 py-2 text-mc-blue hover:bg-mc-bluebg hover:text-mc-blue transition duration-300">Privacy Policy</a>
+            <a href="./contact-us.html" class="block px-4 py-2 text-mc-blue hover:bg-mc-bluebg hover:text-mc-blue transition duration-300">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-mc-blue to-mc-bluebg overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 hero-bg-pattern"></div>
+        <div class="absolute inset-0">
+            <!-- Floating circles -->
+            <div class="absolute w-96 h-96 bg-mc-green/10 rounded-full -top-20 -left-20 animate-pulse"></div>
+            <div class="absolute w-96 h-96 bg-white/5 rounded-full -bottom-20 -right-20 animate-pulse delay-700"></div>
+            
+            <!-- Additional decorative elements -->
+            <div class="absolute w-32 h-32 border-4 border-white/10 rounded-lg top-1/4 right-[10%] animate-rotate origin-center"></div>
+            <div class="absolute w-20 h-20 bg-mc-green/20 rounded-full top-1/3 left-[15%] animate-float"></div>
+            <div class="absolute w-16 h-16 border-2 border-white/20 rounded-full bottom-1/4 right-[20%] animate-float" style="animation-delay: -2s;"></div>
+        </div>
+
+        <div class="container mx-auto px-4 md:px-8 py-16 md:py-28 relative">
+            <div class="grid md:grid-cols-5 gap-8 items-center">
+                <!-- Text Content - 60% -->
+                <div class="md:col-span-3 text-white space-y-6 md:pr-8">
+                    <div class="animate-fade-in-delay mb-4">
+                        <p class="text-mc-green font-raleway tracking-wider text-lg md:text-xl uppercase">Tax Consultancy &bull; Compliance &bull; Business Advisory</p>
+                        <p class="text-white/90 font-raleway tracking-wider text-lg md:text-xl uppercase">Serving Businesses Across Tanzania</p>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-raleway font-bold leading-tight animate-fade-in">
+                        Think Forward, 
+                        <span class="text-mc-green">Stay Compliant</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-white/90 font-poppins animate-fade-in-delay">
+                        Elite Tax and Management Consultancy helps businesses in Tanzania stay on the right side of the law while growing with confidence. From tax planning and TRA compliance to BRELA business registration, NSSF & WCF compliance, and strategic business advisory, we handle the details so you can focus on running your business.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4 animate-fade-in-delay-2">
+                        <a href="./our-services.html" class="group relative inline-flex items-center px-8 py-4 bg-white text-mc-blue rounded-lg hover:bg-mc-green hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl font-semibold overflow-hidden">
+                            Explore Our Services
+                            <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                            <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                        </a>
+                        <a href="./about-us.html" class="group relative inline-flex items-center px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg hover:bg-white hover:text-mc-blue transition-all duration-300 transform hover:-translate-y-1 font-semibold overflow-hidden">
+                            Learn More
+                            <i class="fas fa-chevron-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                            <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Stats/Features Grid - 40% -->
+                <div class="md:col-span-2 grid grid-cols-2 gap-4 animate-fade-in-delay-3">
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-3xl font-bold text-white mb-2">3</div>
+                        <div class="text-white/90">Core Service Areas</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-3xl font-bold text-white mb-2">11+</div>
+                        <div class="text-white/90">Specialized Services</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-3xl font-bold text-white mb-2">TRA</div>
+                        <div class="text-white/90">Compliance Focus</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-3xl font-bold text-white mb-2">BRELA</div>
+                        <div class="text-white/90">Registration Support</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Down Button -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+                <a href="#services" class="inline-block text-white group">
+                    <span class="block mb-2 text-sm font-medium tracking-wider uppercase">Explore More</span>
+                    <div class="relative flex items-center justify-center ">
+                        <div class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm pulse-ring">
+                            <i class="fas fa-arrow-down animate-bounce-down text-white"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <div class="inline-block">
+                    <span class="text-mc-green font-semibold tracking-wider uppercase">Services & Expertise</span>
+                    <div class="h-1 w-[170px] bg-mc-green mt-2 mx-auto"></div>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-raleway font-bold text-mc-blue mt-4">
+                    What We Do
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
+                    We provide comprehensive tax, business advisory, and compliance services to keep your business running smoothly and lawfully in Tanzania.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tax Consultancy -->
+                <div class="group p-8 bg-white rounded-xl border border-gray-100 hover:border-mc-green transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="relative w-16 h-16 mb-8">
+                        <div class="absolute inset-0 bg-mc-blue/10 rounded-lg transform group-hover:rotate-12 transition-transform duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center text-mc-blue group-hover:text-mc-green transition-colors duration-300">
+                            <i class="fas fa-file-invoice-dollar text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-raleway font-bold text-mc-blue mb-4 group-hover:text-mc-green transition-colors duration-300">
+                        Tax Consultancy
+                    </h3>
+                    <p class="text-gray-600">
+                        Tax planning & advisory, preparation and filing of tax returns, tax risk management and compliance with TRA, and support resolving tax disputes.
+                    </p>
+                </div>
+
+                <!-- Management & Business Advisory -->
+                <div class="group p-8 bg-white rounded-xl border border-gray-100 hover:border-mc-green transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="relative w-16 h-16 mb-8">
+                        <div class="absolute inset-0 bg-mc-blue/10 rounded-lg transform group-hover:rotate-12 transition-transform duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center text-mc-blue group-hover:text-mc-green transition-colors duration-300">
+                            <i class="fas fa-briefcase text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-raleway font-bold text-mc-blue mb-4 group-hover:text-mc-green transition-colors duration-300">
+                        Management & Business Advisory
+                    </h3>
+                    <p class="text-gray-600">
+                        Business registration with BRELA, business plans and proposals, tender application support, and strategic planning & business restructuring.
+                    </p>
+                </div>
+
+                <!-- Compliance Services -->
+                <div class="group p-8 bg-white rounded-xl border border-gray-100 hover:border-mc-green transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="relative w-16 h-16 mb-8">
+                        <div class="absolute inset-0 bg-mc-blue/10 rounded-lg transform group-hover:rotate-12 transition-transform duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center text-mc-blue group-hover:text-mc-green transition-colors duration-300">
+                            <i class="fas fa-shield-alt text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-raleway font-bold text-mc-blue mb-4 group-hover:text-mc-green transition-colors duration-300">
+                        Compliance Services
+                    </h3>
+                    <p class="text-gray-600">
+                        NSSF & WCF registration and compliance, labour law and statutory compliance advisory, and corporate governance & risk management.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center mt-12">
+                <a href="./our-services.html" 
+                   class="group relative inline-flex items-center px-8 py-4 bg-mc-blue text-white rounded-lg hover:bg-mc-green transition-all duration-300 transform hover:-translate-y-1 group shadow-lg hover:shadow-xl overflow-hidden">
+                    View All Our Services
+                    <span class="relative ml-2">
+                        <i class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                    </span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-mc-bluebg/10">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Content Left -->
+                <div class="space-y-6 animate-fade-in">
+                    <div class="inline-block">
+                        <span class="text-mc-green font-semibold tracking-wider uppercase">About Us</span>
+                        <div class="h-1 w-20 bg-mc-green mt-2"></div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-raleway font-bold text-mc-blue leading-tight">
+                        Your Trusted Tax & Compliance Partner
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Elite Tax and Management Consultancy is dedicated to helping businesses in Tanzania stay tax-compliant and well-managed. Our approach combines hands-on knowledge of TRA, BRELA, NSSF, and WCF requirements with practical, straightforward advisory support.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6 pt-4">
+                        <div class="flex items-start space-x-4 group">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-white shadow-md flex items-center justify-center group-hover:bg-mc-green transition-colors duration-300">
+                                <i class="fas fa-handshake text-mc-blue group-hover:text-white transition-colors duration-300"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-mc-blue mb-2">Trusted Partnership</h3>
+                                <p class="text-gray-600 text-sm">Building lasting relationships through collaboration and trust.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 group">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-white shadow-md flex items-center justify-center group-hover:bg-mc-green transition-colors duration-300">
+                                <i class="fas fa-shield-alt text-mc-blue group-hover:text-white transition-colors duration-300"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-mc-blue mb-2">Compliance First</h3>
+                                <p class="text-gray-600 text-sm">Keeping you aligned with TRA, BRELA, NSSF, and WCF requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <a href="./about-us.html" class="group relative inline-flex items-center px-8 py-4 bg-mc-blue text-white rounded-lg hover:bg-mc-green transition-all duration-300 transform hover:-translate-y-1 group shadow-md hover:shadow-xl overflow-hidden">
+                            Learn More About Us
+                            <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                            <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Illustration Right -->
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-mc-green/5 rounded-3xl transform rotate-6 group-hover:rotate-3 transition-transform duration-500"></div>
+                    <div class="relative bg-white rounded-3xl shadow-xl p-8 transform group-hover:-rotate-3 transition-transform duration-500">
+                        <svg class="w-full h-auto" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background Elements -->
+                            <circle cx="250" cy="200" r="160" fill="#b4cae0" fill-opacity="0.1"/>
+                            <circle cx="250" cy="200" r="120" fill="#2ecc71" fill-opacity="0.05"/>
+                            
+                            <!-- Meeting Table -->
+                            <path class="animate-draw" d="M150 250 L350 250 L380 280 L120 280 Z" stroke="#012040" stroke-width="2" fill="#b4cae0" fill-opacity="0.2"/>
+                            
+                            <!-- Main Consultant Figure -->
+                            <path class="animate-draw" d="M240 180 Q250 160 260 180 L260 220 L240 220 Z" stroke="#012040" stroke-width="2" fill="#012040"/>
+                            <circle cx="250" cy="150" r="15" fill="#012040"/> <!-- Head -->
+                            <path class="animate-draw" d="M220 200 L200 240" stroke="#012040" stroke-width="2"/> <!-- Left Arm -->
+                            <path class="animate-draw" d="M280 200 L300 240" stroke="#012040" stroke-width="2"/> <!-- Right Arm -->
+                            
+                            <!-- Left Side People -->
+                            <path class="animate-draw" d="M160 190 Q170 170 180 190 L180 220 L160 220 Z" stroke="#012040" stroke-width="2" fill="#2ecc71"/>
+                            <circle cx="170" cy="160" r="12" fill="#2ecc71"/> <!-- Head -->
+                            
+                            <!-- Right Side People -->
+                            <path class="animate-draw" d="M320 190 Q330 170 340 190 L340 220 L320 220 Z" stroke="#012040" stroke-width="2" fill="#2ecc71"/>
+                            <circle cx="330" cy="160" r="12" fill="#2ecc71"/> <!-- Head -->
+                            
+                            <!-- Communication Lines -->
+                            <path class="animate-draw" d="M190 170 Q250 140 310 170" stroke="#012040" stroke-width="2" stroke-dasharray="4 4"/>
+                            
+                            <!-- Presentation Board -->
+                            <rect x="200" y="80" width="100" height="60" fill="#fff" stroke="#012040" stroke-width="2"/>
+                            <path class="animate-draw" d="M210 100 L290 100" stroke="#012040" stroke-width="2"/>
+                            <path class="animate-draw" d="M210 120 L270 120" stroke="#012040" stroke-width="2"/>
+                            
+                            <!-- Growth Chart on Board -->
+                            <path class="animate-draw" d="M210 90 L230 110 L250 95 L270 105 L290 85" stroke="#2ecc71" stroke-width="2"/>
+                            
+                            <!-- Decorative Elements -->
+                            <circle cx="170" cy="240" r="3" fill="#012040"/>
+                            <circle cx="330" cy="240" r="3" fill="#012040"/>
+                            
+                            <!-- Ideas/Thought Bubbles -->
+                            <circle cx="150" cy="130" r="5" fill="#2ecc71" opacity="0.5"/>
+                            <circle cx="350" cy="130" r="5" fill="#2ecc71" opacity="0.5"/>
+                            <circle cx="160" cy="110" r="3" fill="#2ecc71" opacity="0.5"/>
+                            <circle cx="340" cy="110" r="3" fill="#2ecc71" opacity="0.5"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="py-20 bg-gradient-to-br from-white via-mc-bluebg/10 to-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <div class="inline-block">
+                    <span class="text-mc-green font-semibold tracking-wider uppercase">Our Approach</span>
+                    <div class="h-1 w-32 bg-mc-green mt-2 mx-auto"></div>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-raleway font-bold text-mc-blue mt-4">
+                    The Elite Tax and Management Consultancy Approach
+                </h2>
+                <p class="mt-6 text-gray-600 max-w-3xl mx-auto text-lg">
+                    Our systematic approach combines deep expertise with collaborative methodologies to deliver sustainable solutions that drive meaningful impact.
+                </p>
+            </div>
+
+            <!-- Approach Timeline -->
+            <div class="max-w-5xl mx-auto relative">
+                <!-- Center Connecting Line -->
+                <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-mc-blue via-mc-green to-mc-blue transform -translate-x-1/2"></div>
+
+                <!-- Approach Items -->
+                <div class="space-y-24">
+                    <!-- Collaboration -->
+                    <div class="group relative flex items-center justify-center">
+                        <!-- Left Content -->
+                        <div class="w-1/2 pr-12 text-right">
+                            <div class="p-6 bg-white rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-r from-mc-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <h3 class="text-xl font-raleway font-bold text-mc-blue mb-4 group-hover:text-mc-green transition-colors duration-300">
+                                    Collaboration
+                                </h3>
+                                <p class="text-gray-600 leading-relaxed relative z-10">
+                                    We listen carefully and work in collaboration with clients to tailor our approach to meet their unique goals and objectives.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Center Timeline Elements -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+                            <div class="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center z-20 group-hover:scale-110 transition-transform duration-300">
+                                <div class="w-12 h-12 rounded-full bg-mc-blue group-hover:bg-mc-green transition-colors duration-300 flex items-center justify-center">
+                                    <span class="text-white font-bold text-xl">01</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Content -->
+                        <div class="w-1/2 pl-12">
+                            <div class="w-16 h-16 rounded-full bg-mc-blue/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-hands-helping text-2xl text-mc-blue group-hover:text-mc-green transition-colors duration-300"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Empowerment -->
+                    <div class="group relative flex items-center justify-center">
+                        <!-- Left Content -->
+                        <div class="w-1/2 pr-12 text-right">
+                            <div class="w-16 h-16 rounded-full bg-mc-blue/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ml-auto">
+                                <i class="fas fa-users-cog text-2xl text-mc-blue group-hover:text-mc-green transition-colors duration-300"></i>
+                            </div>
+                        </div>
+
+                        <!-- Center Timeline Elements -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+                            <div class="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center z-20 group-hover:scale-110 transition-transform duration-300">
+                                <div class="w-12 h-12 rounded-full bg-mc-blue group-hover:bg-mc-green transition-colors duration-300 flex items-center justify-center">
+                                    <span class="text-white font-bold text-xl">02</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Content -->
+                        <div class="w-1/2 pl-12">
+                            <div class="p-6 bg-white rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-l from-mc-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <h3 class="text-xl font-raleway font-bold text-mc-blue mb-4 group-hover:text-mc-green transition-colors duration-300">
+                                    Empowerment
+                                </h3>
+                                <p class="text-gray-600 leading-relaxed relative z-10">
+                                    We prioritize co-design and local leadership to ensure effective, locally-led results.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Guidance -->
+                    <div class="group relative flex items-center justify-center">
+                        <!-- Left Content -->
+                        <div class="w-1/2 pr-12 text-right">
+                            <div class="p-6 bg-white rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-r from-mc-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <h3 class="text-xl font-raleway font-bold text-mc-blue mb-4 group-hover:text-mc-green transition-colors duration-300">
+                                    Guidance
+                                </h3>
+                                <p class="text-gray-600 leading-relaxed relative z-10">
+                                    We work in partnership with your team, offer insights and expertise to navigate challenges, and support the translation of strategy into realistic, measurable results.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Center Timeline Elements -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+                            <div class="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center z-20 group-hover:scale-110 transition-transform duration-300">
+                                <div class="w-12 h-12 rounded-full bg-mc-blue group-hover:bg-mc-green transition-colors duration-300 flex items-center justify-center">
+                                    <span class="text-white font-bold text-xl">03</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Content -->
+                        <div class="w-1/2 pl-12">
+                            <div class="w-16 h-16 rounded-full bg-mc-blue/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-compass text-2xl text-mc-blue group-hover:text-mc-green transition-colors duration-300"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sustainability -->
+                    <div class="group relative flex items-center justify-center">
+                        <!-- Left Content -->
+                        <div class="w-1/2 pr-12 text-right">
+                            <div class="w-16 h-16 rounded-full bg-mc-blue/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ml-auto">
+                                <i class="fas fa-seedling text-2xl text-mc-blue group-hover:text-mc-green transition-colors duration-300"></i>
+                            </div>
+                        </div>
+
+                        <!-- Center Timeline Elements -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+                            <div class="w-16 h-16 rounded-full bg-white shadow-lg flex items-center justify-center z-20 group-hover:scale-110 transition-transform duration-300">
+                                <div class="w-12 h-12 rounded-full bg-mc-blue group-hover:bg-mc-green transition-colors duration-300 flex items-center justify-center">
+                                    <span class="text-white font-bold text-xl">04</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Content -->
+                        <div class="w-1/2 pl-12">
+                            <div class="p-6 bg-white rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-l from-mc-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <h3 class="text-xl font-raleway font-bold text-mc-blue mb-4 group-hover:text-mc-green transition-colors duration-300">
+                                    Sustainability
+                                </h3>
+                                <p class="text-gray-600 leading-relaxed relative z-10">
+                                    Our co-developed solutions are designed to achieve realistic, long-term, and sustainable results.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gradient-to-br from-white via-mc-bluebg/5 to-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Left Column - SVG Illustration -->
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-br from-mc-blue/5 to-transparent rounded-3xl"></div>
+                    <svg class="w-full h-auto" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background Elements -->
+                        <circle cx="250" cy="250" r="200" fill="#b4cae0" fill-opacity="0.1" class="animate-pulse"/>
+                        <circle cx="250" cy="250" r="150" fill="#2ecc71" fill-opacity="0.05"/>
+                        
+                        <!-- Thinking Person -->
+                        <!-- Head -->
+                        <circle cx="200" cy="200" r="50" fill="#012040"/>
+                        <!-- Body -->
+                        <path d="M170 250 L170 350 Q200 370 230 350 L230 250" fill="#012040"/>
+                        <!-- Arm thinking pose -->
+                        <path class="animate-draw" d="M230 280 C260 280 280 260 270 240" 
+                              stroke="#012040" stroke-width="20" stroke-linecap="round" fill="none"/>
+                        <!-- Hand to chin -->
+                        <circle cx="270" cy="240" r="10" fill="#012040"/>
+                        
+                        <!-- Thought Bubbles -->
+                        <g class="animate-float">
+                            <!-- Main thought bubble -->
+                            <path d="M300 180 Q380 180 380 120 Q380 60 320 60 Q260 60 260 120 Q260 180 300 180" 
+                                  fill="#2ecc71" fill-opacity="0.2" stroke="#012040" stroke-width="2"/>
+                            <!-- Connecting bubbles -->
+                            <circle cx="285" cy="200" r="8" fill="#2ecc71" fill-opacity="0.2"/>
+                            <circle cx="275" cy="215" r="6" fill="#2ecc71" fill-opacity="0.2"/>
+                            <circle cx="270" cy="225" r="4" fill="#2ecc71" fill-opacity="0.2"/>
+                        </g>
+                        
+                        <!-- Question Marks in Thought Bubble -->
+                        <path class="animate-draw" d="M310 100 Q340 100 340 80 Q340 60 320 60 Q300 60 300 80" 
+                              stroke="#012040" stroke-width="3" fill="none"/>
+                        <circle cx="320" cy="110" r="2" fill="#012040"/>
+                        
+                        <path class="animate-draw" d="M350 140 Q370 140 370 120 Q370 100 350 100 Q330 100 330 120" 
+                              stroke="#012040" stroke-width="3" fill="none"/>
+                        <circle cx="350" cy="150" r="2" fill="#012040"/>
+                        
+                        <!-- Decorative Elements -->
+                        <g class="animate-pulse">
+                            <circle cx="150" cy="150" r="5" fill="#2ecc71"/>
+                            <circle cx="400" cy="300" r="5" fill="#2ecc71"/>
+                            <circle cx="180" cy="400" r="5" fill="#2ecc71"/>
+                        </g>
+                    </svg>
+                </div>
+
+                <!-- Right Column - Content -->
+                <div class="space-y-8">
+                    <!-- Section Header -->
+                    <div class="mb-8">
+                        <div class="inline-block">
+                            <span class="text-mc-green font-semibold tracking-wider uppercase">FAQs</span>
+                            <div class="h-1 w-12 bg-mc-green mt-2"></div>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-raleway font-bold text-mc-blue mt-4">
+                            Frequently Asked Questions
+                        </h2>
+                        <p class="text-lg text-gray-600 mt-4">
+                            Find answers to common questions about our tax, compliance, and business advisory services
+                        </p>
+                    </div>
+
+                    <!-- Accordions Container -->
+                    <div class="space-y-3" x-data="{ activeAccordion: 1 }">
+                        <!-- FAQ Item 1 -->
+                        <div class="faq-item rounded-xl overflow-hidden">
+                            <button @click="activeAccordion = activeAccordion === 1 ? null : 1" 
+                                    class="w-full px-6 py-4 flex items-center justify-between bg-gradient-to-r from-mc-blue to-mc-blue/90 text-white transition-all duration-300 hover:from-mc-green hover:to-mc-green/90 focus:outline-none">
+                                <h3 class="text-left font-raleway font-semibold">What services does Elite Tax and Management Consultancy offer?</h3>
+                                <span class="transform transition-transform duration-300" :class="{ 'rotate-180': activeAccordion === 1 }">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </button>
+                            <div x-show="activeAccordion === 1" 
+                                 x-transition:enter="transition ease-out duration-300" 
+                                 x-transition:enter-start="opacity-0 transform -translate-y-4" 
+                                 x-transition:enter-end="opacity-100 transform translate-y-0"
+                                 x-transition:leave="transition ease-in duration-300"
+                                 x-transition:leave-start="opacity-100 transform translate-y-0"
+                                 x-transition:leave-end="opacity-0 transform -translate-y-4"
+                                 class="bg-mc-greybg">
+                                <div class="p-6 border-l-4 border-mc-green">
+                                    <p class="text-gray-600">We offer three core service areas: Tax Consultancy (planning, TRA filing, risk management, and dispute resolution), Management & Business Advisory (BRELA registration, business plans, tender support, and restructuring), and Compliance Services (NSSF & WCF, labour law, and corporate governance).</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="faq-item rounded-xl overflow-hidden">
+                            <button @click="activeAccordion = activeAccordion === 2 ? null : 2" 
+                                    class="w-full px-6 py-4 flex items-center justify-between bg-gradient-to-r from-mc-blue to-mc-blue/90 text-white transition-all duration-300 hover:from-mc-green hover:to-mc-green/90 focus:outline-none">
+                                <h3 class="text-left font-raleway font-semibold">Can you help with TRA tax returns and tax disputes?</h3>
+                                <span class="transform transition-transform duration-300" :class="{ 'rotate-180': activeAccordion === 2 }">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </button>
+                            <div x-show="activeAccordion === 2" 
+                                 x-transition:enter="transition ease-out duration-300" 
+                                 x-transition:enter-start="opacity-0 transform -translate-y-4" 
+                                 x-transition:enter-end="opacity-100 transform translate-y-0"
+                                 x-transition:leave="transition ease-in duration-300"
+                                 x-transition:leave-start="opacity-100 transform translate-y-0"
+                                 x-transition:leave-end="opacity-0 transform -translate-y-4"
+                                 class="bg-mc-greybg">
+                                <div class="p-6 border-l-4 border-mc-green">
+                                    <p class="text-gray-600">Yes. We handle tax planning and advisory, preparation and filing of tax returns, and ongoing tax risk management to keep you compliant with TRA. If a dispute arises, we support you through the resolution process from start to finish.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="faq-item rounded-xl overflow-hidden">
+                            <button @click="activeAccordion = activeAccordion === 3 ? null : 3" 
+                                    class="w-full px-6 py-4 flex items-center justify-between bg-gradient-to-r from-mc-blue to-mc-blue/90 text-white transition-all duration-300 hover:from-mc-green hover:to-mc-green/90 focus:outline-none">
+                                <h3 class="text-left font-raleway font-semibold">Can you help me register my business with BRELA?</h3>
+                                <span class="transform transition-transform duration-300" :class="{ 'rotate-180': activeAccordion === 3 }">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </button>
+                            <div x-show="activeAccordion === 3" 
+                                 x-transition:enter="transition ease-out duration-300" 
+                                 x-transition:enter-start="opacity-0 transform -translate-y-4" 
+                                 x-transition:enter-end="opacity-100 transform translate-y-0"
+                                 x-transition:leave="transition ease-in duration-300"
+                                 x-transition:leave-start="opacity-100 transform translate-y-0"
+                                 x-transition:leave-end="opacity-0 transform -translate-y-4"
+                                 class="bg-mc-greybg">
+                                <div class="p-6 border-l-4 border-mc-green">
+                                    <p class="text-gray-600">Absolutely. Our Management & Business Advisory service covers business registration with BRELA (including company/business name), business plans and proposals, tender application support, and strategic planning for growing or restructuring businesses.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 4 -->
+                        <div class="faq-item rounded-xl overflow-hidden">
+                            <button @click="activeAccordion = activeAccordion === 4 ? null : 4" 
+                                    class="w-full px-6 py-4 flex items-center justify-between bg-gradient-to-r from-mc-blue to-mc-blue/90 text-white transition-all duration-300 hover:from-mc-green hover:to-mc-green/90 focus:outline-none">
+                                <h3 class="text-left font-raleway font-semibold">Do you handle NSSF, WCF, and labour law compliance?</h3>
+                                <span class="transform transition-transform duration-300" :class="{ 'rotate-180': activeAccordion === 4 }">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </button>
+                            <div x-show="activeAccordion === 4" 
+                                 x-transition:enter="transition ease-out duration-300" 
+                                 x-transition:enter-start="opacity-0 transform -translate-y-4" 
+                                 x-transition:enter-end="opacity-100 transform translate-y-0"
+                                 x-transition:leave="transition ease-in duration-300"
+                                 x-transition:leave-start="opacity-100 transform translate-y-0"
+                                 x-transition:leave-end="opacity-0 transform -translate-y-4"
+                                 class="bg-mc-greybg">
+                                <div class="p-6 border-l-4 border-mc-green">
+                                    <p class="text-gray-600">Yes. Our Compliance Services cover NSSF & WCF registration and compliance, labour law and statutory compliance advisory, and corporate governance & risk management, so your business stays on the right side of Tanzania's regulations.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                 
+                </div>
+            </div>
+               <!-- FAQ CTA -->
+               <div class="text-center mt-16">
+                <p class="text-gray-600 mb-6">Still have questions? We're here to help!</p>
+                <a href="./contact-us.html" class="group relative inline-flex items-center px-8 py-4 bg-mc-blue text-white rounded-lg hover:bg-mc-green transition-all duration-300 transform hover:-translate-y-1 group shadow-lg hover:shadow-xl overflow-hidden">
+                    <span class="mr-2">Contact Us</span>
+                    <i class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-24 overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-mc-blue via-mc-blue/95 to-mc-blue">
+            <!-- Animated Shapes -->
+            <div class="absolute inset-0">
+                <div class="absolute top-0 left-0 w-96 h-96 bg-mc-green/10 rounded-full -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+                <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/2 translate-y-1/2 animate-pulse delay-700"></div>
+                <div class="absolute top-1/2 left-1/2 w-96 h-96 bg-mc-green/5 rounded-full -translate-x-1/2 -translate-y-1/2 animate-pulse delay-500"></div>
+            </div>
+            <!-- Grid Pattern -->
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+        </div>
+
+        <div class="container mx-auto px-4 md:px-8 relative">
+            <div class="max-w-4xl mx-auto text-center">
+                <!-- Decorative Element -->
+                <div class="inline-block mb-6 relative">
+                    <span class="text-mc-green font-semibold tracking-wider uppercase relative z-10">Let's Work Together</span>
+                    <div class="h-1 w-26 bg-mc-green mt-2 mx-auto"></div>
+                    <!-- Floating Elements -->
+                    <div class="absolute -top-6 -left-6 w-4 h-4 bg-mc-green/20 rounded-full animate-float"></div>
+                    <div class="absolute -bottom-6 -right-6 w-4 h-4 bg-mc-green/20 rounded-full animate-float" style="animation-delay: -2s;"></div>
+                </div>
+
+                <!-- Main Content -->
+                <h2 class="text-4xl md:text-5xl font-raleway font-bold text-white mb-6 leading-tight">
+                    Ready to Stay Tax 
+                    <span class="text-mc-green">Compliant?</span>
+                </h2>
+                <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+                    Partner with Elite Tax and Management Consultancy for tax planning, business registration, and compliance support you can rely on.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                    <a href="./contact-us.html" 
+                       class="group relative inline-flex items-center px-8 py-4 bg-mc-green text-white rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl overflow-hidden">
+                        <span class="relative z-10 flex items-center font-semibold">
+                            Start a Conversation
+                            <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </span>
+                        <!-- Button Shine Effect -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                    </a>
+                    
+                    <a href="tel:+255685005990" 
+                       class="group inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg border-2 border-white/20 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:bg-white/20">
+                        <i class="fas fa-phone mr-2 transition-transform duration-300 group-hover:rotate-12"></i>
+                        <span class="font-semibold">+255 685 005 990</span>
+                    </a>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-white/80">
+                    <a href="mailto:management.elitetax@gmail.com" 
+                       class="flex items-center hover:text-mc-green transition-colors duration-300">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <span>management.elitetax@gmail.com</span>
+                    </a>
+                    <div class="hidden sm:block h-4 w-px bg-white/20"></div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt mr-2 text-mc-green"></i>
+                        <span>Tabata Segerea
+Kwa Bibi Bus stop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-mc-blue mt-20 pt-20 text-white">
+        <!-- Main Footer Content -->
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 pb-12">
+                <!-- Company Info -->
+                <div class="w-full lg:w-[32%] space-y-6">
+                    <img src="./assets/img/logo-dark.jpg" alt="Elite Tax Management Logo" class="h-14 rounded-full">
+                    <p class="text-white/80 leading-relaxed max-w-md">
+                        "Think Forward, Stay Compliant." Tax consultancy, business advisory, and compliance services for businesses across Tanzania.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-mc-green transition-colors duration-300 group">
+                            <i class="fab fa-linkedin-in text-white group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-mc-green transition-colors duration-300 group">
+                            <i class="fab fa-twitter text-white group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-mc-green transition-colors duration-300 group">
+                            <i class="fab fa-facebook-f text-white group-hover:text-white"></i>
+                        </a>
+                        <a href="https://www.instagram.com/elite_taxmanagement.tz/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-mc-green transition-colors duration-300 group">
+                            <i class="fab fa-instagram text-white group-hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="w-full lg:w-[18%]">
+                    <h3 class="text-xl font-raleway font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="./about-us.html" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./our-services.html" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Our Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./insights_page.html" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Insights
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./contact-us.html" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="w-full lg:w-[25%]">
+                    <h3 class="text-xl font-raleway font-bold mb-6">Our Services</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="./our-services.html#tax-consultancy" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Tax Consultancy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./our-services.html#business-advisory" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Management & Business Advisory
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./our-services.html#compliance" class="text-white/80 hover:text-mc-green transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-sm mr-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                                Compliance Services
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="w-full lg:w-[25%]">
+                    <h3 class="text-xl font-raleway font-bold mb-6">Get In Touch</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-mc-green">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span class="text-white/80">
+                                Tabata Segerea
+Kwa Bibi Bus stop
+                            </span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-mc-green">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <a href="tel:+255685005990" class="text-white/80 hover:text-mc-green transition-colors duration-300">
+                                +255 685 005 990
+                            </a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-mc-green">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <a href="mailto:management.elitetax@gmail.com" class="text-white/80 hover:text-mc-green transition-colors duration-300 break-all">
+                                management.elitetax@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/10 py-6 bg-[#011b36]">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="text-white/60 text-sm">
+                        © 2026 Elite Tax and Management Consultancy. All rights reserved.
+                    </div>
+                    <div class="flex items-center space-x-6 text-sm">
+                        <a href="./privacy-policy.html" class="text-white/60 hover:text-mc-green transition-colors duration-300">Privacy Policy</a>
+                        <a href="./terms-of-service.html" class="text-white/60 hover:text-mc-green transition-colors duration-300">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts - Placed at end of body -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>    
+</body>
+</html>
