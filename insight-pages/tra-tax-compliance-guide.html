@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>try{document.documentElement.classList.add(sessionStorage.getItem('etxSplash')?'etx-skip':'etx-lock')}catch(e){}</script>
+    <link rel="stylesheet" href="../css/splash.css">
+    <noscript><style>#etx-splash{display:none}</style></noscript>
     <title>Understanding TRA Tax Compliance for Small Businesses - Elite Tax and Management Consultancy</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -15,6 +18,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="font-poppins">
+    <!-- Splash screen -->
+    <div id="etx-splash" role="status" aria-label="Loading Elite Tax and Management Consultancy">
+        <div class="etx-stage">
+            <span class="etx-ring"></span><span class="etx-ring"></span>
+            <img class="etx-icon" src="../assets/img/splash-icon.png" alt="Elite Tax and Management Consultancy">
+        </div>
+        <div class="etx-name">Elite Tax and Management Consultancy</div>
+        <div class="etx-tag">&ldquo;Think Forward, Stay Compliant&rdquo;</div>
+        <div class="etx-bar"></div>
+    </div>
+
 
     <!-- Topbar -->
     <div class="bg-mc-blue text-white text-sm">
@@ -307,5 +321,6 @@ Kwa Bibi Bus stop
 
     <!-- Scripts - Placed at end of body -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script src="../js/splash.js"></script>
 </body>
 </html>
